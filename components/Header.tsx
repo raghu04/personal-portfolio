@@ -3,6 +3,7 @@ import React from "react";
 
 // components
 import Nav from "./Nav";
+import MobileNav from "./MobileNav";
 import { Button } from "./ui";
 
 const Header = () => {
@@ -12,7 +13,7 @@ const Header = () => {
         {/* logo */}
         <Link href="/">
           <h1 className="text-4xl font-semibold">
-            Raghu <span className="text-accent">S</span>
+            Raghu<span className="text-accent">_</span>
           </h1>
         </Link>
 
@@ -25,7 +26,9 @@ const Header = () => {
         </div>
 
         {/* mobile nav */}
-        <div className="xl:hidden">mob nav</div>
+        <div className="xl:hidden">
+          <MobileNav />
+        </div>
       </div>
     </header>
   );
