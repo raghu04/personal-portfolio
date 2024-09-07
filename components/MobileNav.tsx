@@ -60,7 +60,7 @@ const MobileNav = () => {
                 pathname === path && "text-accent border-b-2 border-accent"
               }`}
             >
-              {name}
+              <SheetTrigger>{name}</SheetTrigger>
             </Link>
           ))}
         </nav>
