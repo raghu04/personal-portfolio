@@ -25,9 +25,17 @@ const config: Config = {
       colors: {
         primary: "#1C1C22",
         accent: {
-			DEFAULT: "#00FF99",
-			hover: "#00E187"
-		},
+          DEFAULT: "#00FF99",
+          hover: "#00E187",
+        },
+        accentBlue: {
+          DEFAULT: "#275DF5",
+          hover: "#2741E7",
+        },
+        accentGreen: {
+          DEFAULT: "#00FF99",
+          hover: "#00E187",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
