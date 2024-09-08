@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import "swiper/css";
 
@@ -56,7 +56,7 @@ const projects = [
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
 
-  const handleSlideChange = (swiper: any) => {
+  const handleSlideChange = (swiper: SwiperClass) => {
     // get current slide index
     const currentIndex = swiper.activeIndex;
     // update project state based on current slide index
