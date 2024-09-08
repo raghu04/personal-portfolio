@@ -29,7 +29,7 @@ const Photo = () => {
             alt=""
             quality={100}
             src="/assets/photo.png"
-            className="object-contain rounded-full"
+            className="object-contain rounded-full grayscale"
           />
         </motion.div>
 
