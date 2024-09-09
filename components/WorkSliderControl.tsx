@@ -18,17 +18,11 @@ const WorkSliderControl: FC<WorkSliderControlProps> = ({
   const swiper = useSwiper();
   return (
     <div className={containerStyles}>
-      <button className={buttonStyles}>
-        <PiCaretLeftBold
-          className={iconStyles}
-          onClick={() => swiper.slidePrev()}
-        />
+      <button className={buttonStyles} onClick={() => swiper.slidePrev()}>
+        <PiCaretLeftBold className={iconStyles} />
       </button>
-      <button className={buttonStyles}>
-        <PiCaretRightBold
-          className={iconStyles}
-          onClick={() => swiper.slideNext()}
-        />
+      <button className={buttonStyles} onClick={() => swiper.slideNext()}>
+        <PiCaretRightBold className={iconStyles} />
       </button>
     </div>
   );

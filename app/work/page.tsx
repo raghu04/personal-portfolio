@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+import { BsArrowUpRight } from "react-icons/bs";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import "swiper/css";
@@ -20,36 +20,57 @@ import WorkSliderControl from "@/components/WorkSliderControl";
 const projects = [
   {
     num: "01",
-    category: "frontend",
-    title: "Project 1",
+    title: "ADIQAT",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil corporis praesentium culpa, neque provident",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: "",
+    image: "/assets/work/ADIQAT.png",
+    live: "https://adiqat.com/",
   },
   {
     num: "02",
-    category: "fullstack",
-    title: "Project 2",
+    title: "Telemedicine",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil corporis praesentium culpa, neque provident",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb2.png",
+    image: "/assets/work/telemedicine.png",
     live: "",
-    github: "",
   },
   {
     num: "03",
-    category: "fullstack",
-    title: "Project 3",
+    title: "Precision Tuning",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil corporis praesentium culpa, neque provident",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb3.png",
+    image: "/assets/work/precision-tuning.png",
     live: "",
-    github: "",
+  },
+  {
+    num: "04",
+    title: "Starlight Music",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil corporis praesentium culpa, neque provident",
+    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
+    image: "/assets/work/starlight-music.png",
+    live: "https://www.starlightmusic.com/",
+  },
+  {
+    num: "05",
+    title: "AbuZaki",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil corporis praesentium culpa, neque provident",
+    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
+    image: "/assets/work/abuzaki.png",
+    live: "https://abuzaki.com/",
+  },
+  {
+    num: "06",
+    title: "The List",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil corporis praesentium culpa, neque provident",
+    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
+    image: "/assets/work/the-list.png",
+    live: "https://www.ndcoman.com/the-list",
   },
 ];
 
@@ -83,7 +104,7 @@ const Work = () => {
 
               {/* project category */}
               <h2 className="text-[42px] font-bold leading-none text-white hover:text-accent transition-all duration-500 capitalize">
-                {project.category} project
+                {project.title}
               </h2>
 
               {/* project description */}
@@ -106,20 +127,22 @@ const Work = () => {
               {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* live project button */}
-                <Link href={project.live}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-3xl text-white group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Live project</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
+                {project.live && (
+                  <Link href={project.live} target="_blank">
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                          <BsArrowUpRight className="text-3xl text-white group-hover:text-accent" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Live project</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                )}
                 {/* github project button */}
-                <Link href={project.github}>
+                {/* <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -130,7 +153,7 @@ const Work = () => {
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
@@ -143,12 +166,17 @@ const Work = () => {
             >
               {projects.map(({ image }, index) => (
                 <SwiperSlide key={index} className="w-full">
-                  <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                  <div className="h-[460px] relative group flex justify-center items-center">
                     {/* overlay */}
                     <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                     {/* image */}
                     <div className="relative w-full h-full">
-                      <Image src={image} fill className="object-cover" alt="" />
+                      <Image
+                        src={image}
+                        fill
+                        className="object-contain"
+                        alt=""
+                      />
                     </div>
                   </div>
                 </SwiperSlide>

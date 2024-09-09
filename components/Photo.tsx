@@ -28,7 +28,7 @@ const Photo = () => {
             fill
             alt=""
             quality={100}
-            src="/assets/photo.png"
+            src="/assets/profile-photo.png"
             className="object-contain rounded-full grayscale"
           />
         </motion.div>
