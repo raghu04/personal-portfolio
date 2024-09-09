@@ -17,62 +17,7 @@ import {
 } from "@/components/ui/tooltip";
 import WorkSliderControl from "@/components/WorkSliderControl";
 
-const projects = [
-  {
-    num: "01",
-    title: "ADIQAT",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil corporis praesentium culpa, neque provident",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/ADIQAT.png",
-    live: "https://adiqat.com/",
-  },
-  {
-    num: "02",
-    title: "Telemedicine",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil corporis praesentium culpa, neque provident",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/telemedicine.png",
-    live: "",
-  },
-  {
-    num: "03",
-    title: "Precision Tuning",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil corporis praesentium culpa, neque provident",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/precision-tuning.png",
-    live: "",
-  },
-  {
-    num: "04",
-    title: "Starlight Music",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil corporis praesentium culpa, neque provident",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/starlight-music.png",
-    live: "https://www.starlightmusic.com/",
-  },
-  {
-    num: "05",
-    title: "AbuZaki",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil corporis praesentium culpa, neque provident",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/abuzaki.png",
-    live: "https://abuzaki.com/",
-  },
-  {
-    num: "06",
-    title: "The List",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil corporis praesentium culpa, neque provident",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/the-list.png",
-    live: "https://www.ndcoman.com/the-list",
-  },
-];
+import { projects } from "./projects";
 
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
@@ -111,7 +56,7 @@ const Work = () => {
               <p className="text-white/60">{project.description}</p>
 
               {/* tech stack */}
-              <ul className="flex gap-4">
+              <ul className="flex gap-4 flex-wrap">
                 {project.stack.map(({ name }, index) => (
                   <li key={index} className="text-xl text-accent">
                     {name}
