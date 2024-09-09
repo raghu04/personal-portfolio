@@ -8,15 +8,15 @@ interface SocialProps {
 }
 
 const socials = [
-  { icon: <FaGithub />, path: "" },
-  { icon: <FaLinkedinIn />, path: "" },
+  { icon: <FaGithub />, path: "https://github.com/raghu04" },
+  { icon: <FaLinkedinIn />, path: "https://www.linkedin.com/in/raghujs" },
 ];
 
 const Social: FC<SocialProps> = ({ containerStyles, iconStyles }) => {
   return (
     <div className={containerStyles}>
       {socials.map(({ path, icon }, index) => (
-        <Link href={path} key={index} className={iconStyles}>
+        <Link href={path} key={index} target="_blank" className={iconStyles}>
           {icon}
         </Link>
       ))}
