@@ -19,8 +19,9 @@ const Home = () => {
               Hello I&apos;m <br /> <span className="text-accent">Raghu S</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I excel at creating digital experience and I am proficient in
-              various programming languages and technologies.
+              I am a passionate frontend developer focused on creating
+              innovative, user-centric web and mobile applications that deliver
+              seamless digital experiences.
             </p>
 
             {/* btn socials */}

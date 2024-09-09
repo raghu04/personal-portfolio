@@ -26,7 +26,7 @@ import {
 const about = {
   title: "About me",
   description:
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, voluptatem sit quas quaerat",
+    "I am a passionate frontend developer with over 6 years of experience in building web and mobile applications using ReactJS and React Native. I thrive on creating user-friendly, high-performance solutions that blend functionality with exceptional design, always aiming to deliver innovative digital experiences.",
   info: [
     {
       fieldName: "Name",
@@ -64,7 +64,7 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, voluptatem sit quas quaerat",
+    "With over 6 years of experience across two companies, I have developed and delivered high-quality web and mobile applications using ReactJS and React Native. My focus has been on creating scalable, responsive solutions that drive business growth and improve user engagement.",
   items: [
     {
       company: "Fortunesoft IT Innovations",
@@ -84,7 +84,7 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, voluptatem sit quas quaerat",
+    "I have completed a strong academic foundation, which equipped me with essential skills in software development and problem-solving.",
   items: [
     {
       institute: "PES University",
@@ -108,7 +108,7 @@ const education = {
 const skills = {
   title: "My skills",
   description:
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, voluptatem sit quas quaerat",
+    "My core skills include ReactJS, React Native, JavaScript, and front-end development tools, complemented by a strong understanding of UI/UX principles, performance optimization, and cross-platform compatibility.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -127,12 +127,12 @@ const skills = {
       name: "react.js",
     },
     {
-      icon: <SiTypescript />,
-      name: "typescript",
-    },
-    {
       icon: <FaReact />,
       name: "react native",
+    },
+    {
+      icon: <SiTypescript />,
+      name: "typescript",
     },
     {
       icon: <SiNextdotjs />,
