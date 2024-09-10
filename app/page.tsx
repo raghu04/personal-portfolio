@@ -6,6 +6,7 @@ import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 import Button from "@/components/ui/button";
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -26,14 +27,16 @@ const Home = () => {
 
             {/* btn socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button
-                size="lg"
-                variant="outline"
-                className="uppercase flex items-center gap-2"
-              >
-                <span>Resume</span>
-                <FiDownload className="text-xl" />
-              </Button>
+              <Link href={"/assets/raghu-s.pdf"} target="_blank">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="uppercase flex items-center gap-2"
+                >
+                  <span>Resume</span>
+                  <FiDownload className="text-xl" />
+                </Button>
+              </Link>
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles="flex gap-6"

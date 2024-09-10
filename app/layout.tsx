@@ -27,10 +27,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${jetbrainsMono.variable} antialiased`}>
+        <Analytics />
         <Header />
         <StairTransition />
         <PageTransition>{children}</PageTransition>
-        <Analytics />
       </body>
     </html>
   );
