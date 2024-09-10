@@ -46,30 +46,28 @@ const Contact = () => {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* map */}
           <div className="xl:w-[54%] order-2 xl:order-none">
-            {/* Render the Google Map only after the script is loaded */}
-            {isLoaded ? (
-              <div className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
-                <h3 className="text-4xl text-accent">Let's work together</h3>
+            <div className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+              <h3 className="text-4xl text-accent">Let's work together</h3>
 
-                {/* Load the Google Maps Script */}
-                <LoadScript
-                  apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}
-                  onLoad={handleScriptLoad}
-                />
+              {/* Load the Google Maps Script */}
+              <LoadScript
+                apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}
+                onLoad={handleScriptLoad}
+              />
 
+              {/* Render the Google Map only after the script is loaded */}
+              {isLoaded ? (
                 <GoogleMap
                   lat={12.980297088623047}
                   lng={77.5870132446289}
                   zoom={12}
                 />
-              </div>
-            ) : (
-              <div className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+              ) : (
                 <p className="text-center text-white/60 text-xl">
                   Loading map...
                 </p>
-              </div>
-            )}
+              )}
+            </div>
           </div>
 
           {/* info */}
