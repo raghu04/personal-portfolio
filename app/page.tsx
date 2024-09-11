@@ -27,7 +27,7 @@ const Home = () => {
 
             {/* btn socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Link href={"/assets/raghu-s.pdf"} target="_blank">
+              <Link href={"/assets/raghus110924.pdf"} target="_blank">
                 <Button
                   size="lg"
                   variant="outline"
